@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shubhadip Chakraborty — Futuristic Pharmacy Portfolio</title>
+
+<meta name="description"
+content="Shubhadip Chakraborty, B.Pharm student at Adamas University, with practical exposure to pharmaceutical manufacturing, quality systems, laboratory techniques and digital skills.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--bg:#05070d;
+--text:#f4f7fb;
+--muted:#8993a5;
+--cyan:#66f7ff;
+--lime:#b7ff4a;
+--line:rgba(255,255,255,.1);
+--max:1200px;
+}
+
+*{
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+margin:0;
+background:var(--bg);
+color:var(--text);
+font-family:Manrope,Arial,sans-serif;
+overflow-x:hidden;
+}
+
+body:before{
+content:"";
+position:fixed;
+inset:0;
+pointer-events:none;
+opacity:.2;
+background-image:
+linear-gradient(rgba(102,247,255,.035) 1px,transparent 1px),
+linear-gradient(90deg,rgba(102,247,255,.035) 1px,transparent 1px);
+background-size:55px 55px;
+mask-image:linear-gradient(to bottom,black,transparent 80%);
+z-index:-2;
+}
+
+.orb{
+position:fixed;
+width:38vw;
+height:38vw;
+border-radius:50%;
+background:radial-gradient(
+circle,
+rgba(102,247,255,.12),
+transparent 68%
+);
+filter:blur(8px);
+right:-15vw;
+top:4vh;
+pointer-events:none;
+z-index:-1;
+}
+
+.container{
+width:min(var(--max),90vw);
+margin:auto;
+}
+
+/* NAVIGATION */
+
+.nav{
+height:76px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+border-bottom:1px solid var(--line);
+}
+
+.brand{
+font-family:'Space Grotesk';
+font-weight:700;
+letter-spacing:-.04em;
+}
+
+.brand span{
+color:var(--cyan);
+}
+
+.navlinks{
+display:flex;
+gap:28px;
+}
+
+.navlinks a{
+color:var(--muted);
+text-decoration:none;
+font-size:.85rem;
+transition:.3s;
+}
+
+.navlinks a:hover{
+color:var(--cyan);
+}
+
+/* HERO */
+
+.hero{
+min-height:calc(100vh - 76px);
+display:grid;
+align-items:center;
+padding:70px 0 100px;
+}
+
+.eyebrow,
+.kicker{
+color:var(--cyan);
+font-size:.72rem;
+letter-spacing:.18em;
+text-transform:uppercase;
+}
+
+.eyebrow{
+display:flex;
+align-items:center;
+gap:10px;
+margin-bottom:22px;
+}
+
+.dot{
+width:7px;
+height:7px;
+border-radius:50%;
+background:var(--lime);
+box-shadow:0 0 18px var(--lime);
+}
+
+h1,
+h2,
+h3{
+font-family:'Space Grotesk';
+margin:0;
+letter-spacing:-.065em;
+}
+
+h1{
+font-size:clamp(4rem,9vw,8.6rem);
+line-height:.84;
+max-width:1000px;
+}
+
+h1 .stroke{
+color:transparent;
+-webkit-text-stroke:1px rgba(244,247,251,.65);
+}
+
+.hero-copy{
+max-width:690px;
+margin-top:30px;
+color:#aeb7c7;
+font-size:1.05rem;
+line-height:1.75;
+}
+
+.actions{
+display:flex;
+gap:14px;
+margin-top:34px;
+}
+
+.btn{
+min-height:50px;
+padding:0 22px;
+display:inline-flex;
+align-items:center;
+justify-content:center;
+text-decoration:none;
+border:1px solid var(--line);
+color:var(--text);
+border-radius:4px;
+font-size:.86rem;
+transition:.3s;
+}
+
+.btn.primary{
+background:var(--cyan);
+color:#041014;
+border-color:var(--cyan);
+font-weight:800;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 14px 35px rgba(102,247,255,.14);
+}
+
+/* SECTIONS */
+
+.section{
+padding:115px 0;
+}
+
+.section-head{
+display:flex;
+justify-content:space-between;
+align-items:end;
+margin-bottom:48px;
+}
+
+.section h2{
+font-size:clamp(2.6rem,6vw,5.4rem);
+line-height:.95;
+margin-top:10px;
+}
+
+.section-intro{
+max-width:430px;
+color:var(--muted);
+line-height:1.7;
+font-size:.92rem;
+}
+
+/* CARDS */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:18px;
+}
+
+.card{
+background:
+linear-gradient(
+145deg,
+rgba(255,255,255,.065),
+rgba(255,255,255,.018)
+);
+border:1px solid var(--line);
+padding:30px;
+min-height:280px;
+position:relative;
+overflow:hidden;
+transition:.45s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+border-color:rgba(102,247,255,.45);
+}
+
+.card:after{
+content:"";
+position:absolute;
+width:220px;
+height:220px;
+border-radius:50%;
+background:
+radial-gradient(
+circle,
+rgba(102,247,255,.11),
+transparent 70%
+);
+right:-90px;
+bottom:-90px;
+}
+
+.num{
+font-family:'Space Grotesk';
+color:var(--cyan);
+font-size:.75rem;
+}
+
+.card h3{
+font-size:2rem;
+margin-top:55px;
+}
+
+.card p{
+color:var(--muted);
+line-height:1.7;
+max-width:520px;
+}
+
+.tags{
+display:flex;
+gap:8px;
+flex-wrap:wrap;
+margin-top:20px;
+}
+
+.tag{
+border:1px solid var(--line);
+padding:7px 10px;
+color:#b9c3d3;
+font-size:.66rem;
+text-transform:uppercase;
+letter-spacing:.08em;
+}
+
+/* ABOUT */
+
+.about{
+display:grid;
+grid-template-columns:.9fr 1.1fr;
+gap:90px;
+}
+
+.bigquote{
+font-family:'Space Grotesk';
+font-size:clamp(2rem,4vw,3.5rem);
+line-height:1.05;
+}
+
+.about p{
+color:var(--muted);
+line-height:1.85;
+}
+
+.skillrow{
+display:grid;
+grid-template-columns:170px 1fr;
+gap:20px;
+border-top:1px solid var(--line);
+padding:17px 0;
+color:var(--muted);
+font-size:.86rem;
+}
+
+.skillrow strong{
+color:var(--text);
+font-family:'Space Grotesk';
+}
+
+/* TIMELINE */
+
+.timeline{
+border-left:1px solid var(--cyan);
+padding-left:24px;
+}
+
+.item{
+padding:0 0 32px;
+}
+
+.item:last-child{
+padding-bottom:0;
+}
+
+.item .year{
+color:var(--lime);
+font-size:.7rem;
+letter-spacing:.12em;
+}
+
+.item h3{
+font-size:1.35rem;
+margin:7px 0;
+}
+
+.item p{
+margin:0;
+color:var(--muted);
+line-height:1.7;
+}
+
+/* CONTACT */
+
+.contact{
+border:1px solid var(--line);
+background:
+linear-gradient(
+120deg,
+rgba(102,247,255,.07),
+rgba(183,255,74,.025)
+);
+padding:70px clamp(25px,6vw,80px);
+display:flex;
+justify-content:space-between;
+gap:40px;
+align-items:end;
+}
+
+.contact h2{
+font-size:clamp(2.8rem,6vw,6rem);
+}
+
+/* FOOTER */
+
+.footer{
+padding:28px 0 40px;
+border-top:1px solid var(--line);
+display:flex;
+justify-content:space-between;
+color:#667084;
+font-size:.7rem;
+}
+
+/* ANIMATION */
+
+.reveal{
+opacity:0;
+animation:up .8s ease-out both;
+}
+
+.d1{
+animation-delay:.12s;
+}
+
+.d2{
+animation-delay:.24s;
+}
+
+.d3{
+animation-delay:.36s;
+}
+
+.d4{
+animation-delay:.48s;
+}
+
+.scroll{
+opacity:0;
+transform:translateY(28px);
+transition:.7s ease;
+}
+
+.scroll.visible{
+opacity:1;
+transform:none;
+}
+
+@keyframes up{
+from{
+opacity:0;
+transform:translateY(28px);
+}
+
+to{
+opacity:1;
+transform:none;
+}
+}
+
+/* MOBILE */
+
+@media(max-width:760px){
+
+.navlinks{
+display:none;
+}
+
+.hero{
+min-height:auto;
+padding:90px 0 120px;
+}
+
+h1{
+font-size:clamp(3.5rem,16vw,6rem);
+}
+
+.section{
+padding:85px 0;
+}
+
+.section-head,
+.contact{
+display:block;
+}
+
+.section-intro{
+margin-top:22px;
+}
+
+.grid,
+.about{
+grid-template-columns:1fr;
+gap:18px;
+}
+
+.about{
+gap:45px;
+}
+
+.skillrow{
+grid-template-columns:115px 1fr;
+}
+
+.contact .btn{
+margin-top:30px;
+}
+
+.footer{
+gap:15px;
+flex-direction:column;
+}
+
+}
+
+@media(prefers-reduced-motion:reduce){
+
+*,
+*:before,
+*:after{
+animation-duration:.01ms!important;
+transition-duration:.01ms!important;
+scroll-behavior:auto!important;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="orb"></div>
+
+<!-- NAVIGATION -->
+
+<header class="container nav reveal">
+
+<div class="brand">
+SHUBHADIP<span>•</span>CC
+</div>
+
+<nav class="navlinks">
+
+<a href="#about">About</a>
+<a href="#education">Education</a>
+<a href="#experience">Experience</a>
+<a href="#certificates">Certificates</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+</header>
+
+
+<main>
+
+<!-- HERO -->
+
+<section class="container hero">
+
+<div>
+
+<div class="eyebrow reveal d1">
+
+<span class="dot"></span>
+
+B.Pharm student / pharmaceutical sciences
+
+</div>
+
+<h1 class="reveal d2">
+
+PHARMA<br>
+
+<span class="stroke">MEETS</span><br>
+
+PRECISION.
+
+</h1>
+
+<p class="hero-copy reveal d3">
+
+I'm Shubhadip Chakraborty, a Bachelor of Pharmacy student at Adamas University.
+I bring practical exposure to pharmaceutical manufacturing, quality systems,
+laboratory techniques and a growing digital skill set.
+
+</p>
+
+<div class="actions reveal d4">
+
+<a class="btn primary" href="#experience">
+Explore profile ↗
+</a>
+
+<a class="btn" href="#contact">
+Let's connect
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about" class="section">
+
+<div class="container about">
+
+<div class="scroll">
+
+<div class="kicker">
+01 / Profile
+</div>
+
+<div class="bigquote">
+
+PRACTICAL BY NATURE.
+CURIOUS BY CHOICE.
+
+</div>
+
+</div>
+
+
+<div class="scroll">
+
+<p>
+
+Results-driven B.Pharm student with hands-on exposure to laboratory work,
+drug formulation basics and experimental techniques. My interests are
+especially aligned with Quality Assurance, Quality Control and
+company-oriented pharmaceutical roles.
+
+</p>
+
+<p>
+
+I value observation, accurate data recording, problem-solving and
+practical execution over purely theoretical learning.
+
+</p>
+
+
+<div style="margin-top:35px">
+
+<div class="skillrow">
+
+<strong>Pharma</strong>
+
+<span>
+Manufacturing · quality systems · laboratory exposure
+</span>
+
+</div>
+
+
+<div class="skillrow">
+
+<strong>Digital</strong>
+
+<span>
+Microsoft Office · HTML · Tally 7.2/9
+</span>
+
+</div>
+
+
+<div class="skillrow">
+
+<strong>Strengths</strong>
+
+<span>
+Analytical thinking · teamwork · time management · quick learning
+</span>
+
+</div>
+
+
+<div class="skillrow">
+
+<strong>Languages</strong>
+
+<span>
+English · Hindi · Bengali
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- EDUCATION -->
+
+<section id="education" class="section">
+
+<div class="container">
+
+<div class="section-head scroll">
+
+<div>
+
+<div class="kicker">
+02 / Education
+</div>
+
+<h2>
+LEARNING<br>
+IN LAYERS.
+</h2>
+
+</div>
+
+<p class="section-intro">
+
+Academic progression from school education to pharmaceutical sciences,
+with practical exposure complementing classroom learning.
+
+</p>
+
+</div>
+
+
+<div class="timeline scroll">
+
+
+<div class="item">
+
+<div class="year">
+2023 — 2027
+</div>
+
+<h3>
+Bachelor of Pharmacy (B.Pharm) · Adamas University
+</h3>
+
+<p>
+Barasat, Kolkata
+</p>
+
+</div>
+
+
+<div class="item">
+
+<div class="year">
+2021 — 2023
+</div>
+
+<h3>
+Higher Secondary · Maynaguri Subhasnagar Higher Secondary School
+</h3>
+
+<p>
+Maynaguri, Jalpaiguri · WBCHSE
+</p>
+
+</div>
+
+
+<div class="item">
+
+<div class="year">
+2015 — 2021
+</div>
+
+<h3>
+Secondary · Jamaldaha Tulsi Devi Higher Secondary School
+</h3>
+
+<p>
+Jamaldaha, Coochbehar · WBBSE
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- EXPERIENCE -->
+
+<section id="experience" class="section">
+
+<div class="container">
+
+<div class="section-head scroll">
+
+<div>
+
+<div class="kicker">
+03 / Experience
+</div>
+
+<h2>
+FIELD<br>
+EXPOSURE.
+</h2>
+
+</div>
+
+<p class="section-intro">
+
+Real-world pharmaceutical exposure across manufacturing,
+quality systems and analytical laboratory environments.
+
+</p>
+
+</div>
+
+
+<div class="grid">
+
+
+<article class="card scroll">
+
+<div class="num">
+EXPERIENCE / 001
+</div>
+
+<h3>
+Zydus Healthcare Limited
+</h3>
+
+<p>
+
+Internship at Unit-II with practical exposure to pharmaceutical
+manufacturing and quality systems. Observed SMG/RMG, Cone Mill,
+Vibro Shifter, capsule filling, blister and strip packing, and
+the role of GLP, GDP and GMP.
+
+</p>
+
+<div class="tags">
+
+<span class="tag">Manufacturing</span>
+<span class="tag">GMP</span>
+<span class="tag">QA / QC</span>
+
+</div>
+
+</article>
+
+
+<article class="card scroll">
+
+<div class="num">
+EXPERIENCE / 002
+</div>
+
+<h3>
+Emami R&D
+</h3>
+
+<p>
+
+Industrial visit with exposure to a research and development
+environment within the pharmaceutical / consumer health ecosystem.
+
+</p>
+
+<div class="tags">
+
+<span class="tag">Industrial Visit</span>
+<span class="tag">R&D</span>
+
+</div>
+
+</article>
+
+
+<article class="card scroll">
+
+<div class="num">
+LAB / ANALYTICS
+</div>
+
+<h3>
+Analytical Laboratory
+</h3>
+
+<p>
+
+Observed chromatography techniques including HPLC and HPTLC used
+in analysis and quality control of pharmaceutical products,
+alongside documentation and compliance practices.
+
+</p>
+
+<div class="tags">
+
+<span class="tag">HPLC</span>
+<span class="tag">HPTLC</span>
+<span class="tag">QC</span>
+
+</div>
+
+</article>
+
+
+<article class="card scroll">
+
+<div class="num">
+SKILLS / PRACTICAL
+</div>
+
+<h3>
+Technical Toolkit
+</h3>
+
+<p>
+
+Microsoft Office, HTML and Tally 7.2/9, supported by analytical
+thinking, teamwork, time management and a quick-learning mindset.
+
+</p>
+
+<div class="tags">
+
+<span class="tag">Office</span>
+<span class="tag">HTML</span>
+<span class="tag">Tally</span>
+
+</div>
+
+</article>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CERTIFICATES -->
+
+<section id="certificates" class="section">
+
+<div class="container">
+
+<div class="section-head scroll">
+
+<div>
+
+<div class="kicker">
+04 / Certificates
+</div>
+
+<h2>
+CREDENTIALS<br>
+IN MOTION.
+</h2>
+
+</div>
+
+<p class="section-intro">
+
+Seminars, workshops and professional learning experiences supporting
+pharmaceutical and digital development.
+
+</p>
+
+</div>
+
+
+<div class="grid">
+
+
+<article class="card scroll">
+
+<div class="num">
+CERT / 001
+</div>
+
+<h3>
+Diploma in Computer Application
+</h3>
+
+<p>
+Diploma in Computer Application (D.C.A.).
+</p>
+
+</article>
+
+
+<article class="card scroll">
+
+<div class="num">
+CERT / 002
+</div>
+
+<h3>
+Modern Medicine & Rational Use
+</h3>
+
+<p>
+
+International Seminar on “Modern Medicine and Rational Use of Medicine —
+A Challenge”, Dr. Triguna Sen Memorial Hall, Jadavpur University,
+Kolkata · 17 January 2025.
+
+</p>
+
+</article>
+
+
+<article class="card scroll">
+
+<div class="num">
+CERT / 003
+</div>
+
+<h3>
+Healthmedicon 2025
+</h3>
+
+<p>
+
+4th International Conference on “Unveiling Opportunities in Global
+Healthcare Landscape: Scientific Advancements, Innovations & Recent Trends”,
+organized by School of Health & Medical Sciences, Adamas University in
+collaboration with Universiti Teknologi MARA (UiTM), Malaysia.
+
+</p>
+
+</article>
+
+
+<article class="card scroll">
+
+<div class="num">
+CERT / 004
+</div>
+
+<h3>
+Structure-Based Drug Design
+</h3>
+
+<p>
+
+One-Day Workshop on Structure-Based Drug Design (SBDD).
+
+</p>
+
+</article>
+
+
+<article class="card scroll">
+
+<div class="num">
+CERT / 005
+</div>
+
+<h3>
+NASSCOM FutureSkills Prime
+</h3>
+
+<p>
+Gen AI Tools & Assessment.
+</p>
+
+<div class="tags">
+
+<span class="tag">Gen AI</span>
+<span class="tag">FutureSkills Prime</span>
+
+</div>
+
+</article>
+
+
+<article class="card scroll">
+
+<div class="num">
+CERT / 006
+</div>
+
+<h3>
+Mastering DSC
+</h3>
+
+<p>
+
+Hands-on workshop on “Mastering Differential Scanning Calorimetry (DSC):
+From Thermal Transitions to Process Optimization” in collaboration
+with Antoon Paar.
+
+</p>
+
+<div class="tags">
+
+<span class="tag">DSC</span>
+<span class="tag">Workshop</span>
+<span class="tag">Process Optimization</span>
+
+</div>
+
+</article>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- INTERESTS -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="section-head scroll">
+
+<div>
+
+<div class="kicker">
+05 / Beyond work
+</div>
+
+<h2>
+OUTSIDE<br>
+THE LAB.
+</h2>
+
+</div>
+
+</div>
+
+
+<div class="grid">
+
+
+<article class="card scroll">
+
+<div class="num">
+INTEREST / 001
+</div>
+
+<h3>
+Photography
+</h3>
+
+<p>
+
+Visual storytelling, observation and exploring details through photography.
+
+</p>
+
+</article>
+
+
+<article class="card scroll">
+
+<div class="num">
+INTEREST / 002
+</div>
+
+<h3>
+Riding & Exploring
+</h3>
+
+<p>
+
+Discovering new places, experiences and perspectives through riding
+and exploration.
+
+</p>
+
+</article>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact" class="section">
+
+<div class="container">
+
+<div class="contact scroll">
+
+<div>
+
+<div class="kicker">
+06 / Contact
+</div>
+
+<h2>
+LET'S<br>
+CONNECT.
+</h2>
+
+<p style="color:var(--muted);line-height:1.7">
+
+For opportunities, collaborations or professional conversations.
+
+</p>
+
+</div>
+
+
+<a class="btn primary"
+href="mailto:cshubhadip70@gmail.com">
+
+Email me ↗
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer class="container footer">
+
+<span>
+© 2026 SHUBHADIP CHAKRABORTY
+</span>
+
+<span>
+B.PHARM · ADAMAS UNIVERSITY
+</span>
+
+</footer>
+
+
+<!-- SCROLL ANIMATION -->
+
+<script>
+
+const obs = new IntersectionObserver(
+entries => {
+
+entries.forEach(entry => {
+
+if(entry.isIntersecting){
+
+entry.target.classList.add('visible');
+
+}
+
+});
+
+},
+{
+threshold:.12
+}
+);
+
+document
+.querySelectorAll('.scroll')
+.forEach(el => obs.observe(el));
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
